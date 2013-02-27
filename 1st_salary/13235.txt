@@ -1,1 +1,5 @@
-rubles
+Euro
+Lorem
+Ipsum
+Rubles
+Party
