@@ -9,5 +9,6 @@ $(document).ready(function() {
         // No slider
     }
 
+    //underline current button
     $("#header_menu_" + chapter).addClass('current');
 });
