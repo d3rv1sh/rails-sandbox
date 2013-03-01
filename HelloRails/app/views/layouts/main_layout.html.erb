@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <!-- Meta data -->
+  <meta charset=utf-8" >
+  <meta name="keywords" content="Blog about Ruby on Rails" />
+  <meta name="description" content="Just another blog about Ruby on Rails" />
+
+  <!-- Style links -->
+  <%= stylesheet_link_tag('reset','text', 's3slider','style', :medua => "all") %>
+  <%= javascript_include_tag('jquery.js', 's3Slider.js', 'main_script.js')  %>
+
+  <!-- Title -->
+  <title>Blog about Ruby on Rails</title>
+
+</head>
+
+<body>
+    <%= render(:partial => "header") %>
+
+<div id="wp">
+
+  <!-- image on top -->
+  <%= image_tag('ruby.png', :class => "ruby" ) %>
+
+  <div id="wrapper">
+    <!-- Left side column -->
+    <div id="left_column">
+      <div id="header">
+        <!-- Logo placeholder -->
+        <div id="site_title">
+          <h1>
+            <a href="#">Ruby <strong>on Rails</strong><span>A Programmer's Best Friend</span></a>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Side menu -->
+      <div id="sidebar">
+        <h4>Categories</h4>
+        <ul class="list">
+          <li><a href="#">Curabitur sed</a></li>
+          <li><a href="#">Praesent adipiscing</a></li>
+          <li><a href="#">Duis sed justo</a></li>
+          <li><a href="#">Mauris vulputate</a></li>
+          <li><a href="#">Nam auctor</a></li>
+          <li><a href="#">Aliquam quam</a></li>
+        </ul>
+      </div>
+      <div class="cleaner"></div>
+    </div>
+
+    <!-- Slider block if necessary -->
+    <% if @slider %>
+    <%= render(:partial => "slider") %>
+    <% end %>
+
+    <!-- Content column -->
+    <div id="right_column">
+
+      <!-- Posts block -->
+      <div id="main">
+        <%= yield %>
+
+        <!-- RSS feed block -->
+        <div id="rss">
+          <a href="#">SUBSCRIBE NOW <br /><span>to our RSS feed</span></a>
+        </div>
+
+      </div> <!-- End of Posts block-->
+
+      <div class="cleaner"></div>
+
+    </div> <!-- End of content section-->
+
+    <div class="cleaner"></div>
+
+    <!-- Footer section-->
+    <div id="footer">
+      <p>The Ruby License is the <a href="http://en.wikipedia.org/wiki/Free_software_licence">free software licence </a> applied to the <a href="http://www.ruby-lang.org">Ruby programming language</a> and also available to be used in other projects.</p>
+    </div>
+
+    <div class="cleaner"></div>
+
+  </div> <!-- End of Wrapper -->
+</div>
+
+</body>
+</html>

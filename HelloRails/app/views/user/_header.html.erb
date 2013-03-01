@@ -1,0 +1,17 @@
+<div id="top_header">
+  <!-- Top main menu block -->
+  <div id="menu">
+    <ul class="main">
+      <li><%= link_to("Home", {:action => 'index'}, :id => 'header_menu_home' )  %></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Users</a></li>
+      <li><%= link_to("Help", {:action => 'help'}, :id => 'header_menu_help' )  %> </li>
+      <li><a href="#">Sign out</a></li>
+    </ul>
+    <script type="text/javascript">
+        var chapter = "<%= @chapter %>";
+    </script>
+  </div>
+</div>
