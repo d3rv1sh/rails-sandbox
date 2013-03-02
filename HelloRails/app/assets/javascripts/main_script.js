@@ -10,5 +10,16 @@ $(document).ready(function() {
     }
 
     //underline current button
-    $("#header_menu_" + chapter).addClass('current');
+    var current = $("#header_menu_" + chapter);
+    current.addClass('current');
+
+    si = $("#header_menu_sign_in");
+    so = $("#header_menu_sign_out");
+    if (signed){
+        si.hide();
+        so.show();
+    } else {
+        so.hide();
+        si.show();
+    }
 });

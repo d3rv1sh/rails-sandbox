@@ -1,4 +1,7 @@
 HelloRails::Application.routes.draw do
+  resources :posts
+
+
   root :to  => "user#index"
 
   # The priority is based upon order of creation:
