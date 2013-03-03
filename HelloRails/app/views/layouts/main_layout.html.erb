@@ -8,7 +8,7 @@
   <meta name="description" content="Just another blog about Ruby on Rails" />
 
   <!-- Style links -->
-  <%= stylesheet_link_tag('reset','text', 's3slider','style', :medua => "all") %>
+  <%= stylesheet_link_tag('reset','text', 's3slider','style','sign_form_style.css', :medua => "all") %>
   <%= javascript_include_tag('jquery.js', 's3Slider.js', 'main_script.js')  %>
 
   <!-- Title -->
@@ -17,9 +17,13 @@
 </head>
 
 <body>
-    <%= render(:partial => "header") %>
+    <%= render(:partial => "user/header") %>
 
 <div id="wp">
+
+  <% if !@signed %>
+      <%= render(:partial => "user/sign_form") %>
+  <% end %>
 
   <!-- image on top -->
   <%= image_tag('ruby.png', :class => "ruby" ) %>
@@ -27,7 +31,7 @@
   <div id="wrapper">
     <!-- Left side column -->
     <div id="left_column">
-    <%= render(:partial => "logo") %>
+    <%= render(:partial => "user/logo") %>
 
       <!-- Side menu -->
       <div id="sidebar">
@@ -46,7 +50,7 @@
 
     <!-- Slider block if necessary -->
     <% if @slider %>
-    <%= render(:partial => "slider") %>
+    <%= render(:partial => "user/slider") %>
     <% end %>
 
     <!-- Content column -->

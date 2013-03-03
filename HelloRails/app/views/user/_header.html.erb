@@ -1,7 +1,8 @@
+<% @signed = false %>
 <script type="text/javascript">
-    var signed  = "<%= @signed %>";
     var chapter = "<%= @chapter %>";
 </script>
+
 
 <div id="top_header">
   <!-- Top main menu block -->
@@ -13,8 +14,13 @@
     <ul>
       <li><a href="#">Users</a></li>
       <li><%= link_to("Help", {:action => 'help'}, :id => 'header_menu_help' )  %> </li>
-      <li><%= link_to("Sign in", {:action => 'sign_in'}, :id => 'header_menu_sign_in' )  %></li>
-      <li><%= link_to("Sign out", {:action => 'sign_out'}, :id => 'header_menu_sign_out' )  %></li>
+
+      <% if !@signed %>
+        <li><%= link_to("Sign in", "#overlay_signup", :id => 'header_menu_sign_in' )  %></li>
+      <% else %>
+        <li><%= link_to("Sign out", {:action => 'sign_in'}, :id => 'header_menu_sign_out' )  %></li>
+      <% end %>
+
     </ul>
   </div>
 </div>

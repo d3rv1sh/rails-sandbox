@@ -13,13 +13,8 @@ $(document).ready(function() {
     var current = $("#header_menu_" + chapter);
     current.addClass('current');
 
-    si = $("#header_menu_sign_in");
-    so = $("#header_menu_sign_out");
-    if (signed){
-        si.hide();
-        so.show();
-    } else {
-        so.hide();
-        si.show();
-    }
+     $("#sign_form").hide();
+     $('#header_menu_sign_in').click(function () {
+         $("#sign_form").show();
+    });
 });
