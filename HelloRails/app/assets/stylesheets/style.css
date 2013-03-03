@@ -289,6 +289,7 @@ em { color: #5d6d1e; }
     color: #666;
     font-family: "PT Sans", Helevetica, Arial, sans-serif;
     font-size: 1.1em;
+    margin-left: 10px;
 }
 
 .post_section img {
@@ -297,7 +298,7 @@ em { color: #5d6d1e; }
     margin: 20px 0;
 }
 
-.post_section .post_comment_number {
+.post_section .post_likes {
     position: absolute;
     top: -10px;
     right: 0px;
@@ -322,6 +323,13 @@ em { color: #5d6d1e; }
     font-size: 20px;
     font-weight: bold;
 }
+
+.post_title {
+    padding-left: 15px;
+    background-color: #F5F5F5;
+    margin-bottom: 5px;
+}
+
 
 #rss {
     height: 70px;
