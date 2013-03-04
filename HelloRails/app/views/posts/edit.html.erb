@@ -1,6 +1,8 @@
-<h1>Editing post</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to("Back", {:action => 'index'} ) %>
+<div class="edit_post">
+  <div class="button_holder">
+    <%= link_to 'Show', @post %><%= link_to("Back", {:action => 'index'} ) %>
+  </div>
+</div>

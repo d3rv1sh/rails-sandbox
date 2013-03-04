@@ -349,7 +349,7 @@ em { color: #5d6d1e; }
     margin-left: 10px;
 }
 .help h1{
-   color: #970202;
+   color: #F35E5E;
    border: 3px solid #f1f1f1;
    font-size: 1.6em;
    width: 430px;
@@ -377,6 +377,52 @@ em { color: #5d6d1e; }
     background-color: #f5f5f5;
     padding: 5px 10px;
 }
+/* End of Show post styles */
+
+/* Edit post styles */
+.edit_post input {
+    padding: 5px;
+    border: 3px solid #f1f1f1;
+    font-size: 1.3em;
+}
+.edit_post input:focus {
+    font-weight: bold;
+    width: 470px;
+    background-color: #F9F9F9;
+}
+.edit_post textarea {
+    padding: 5px;
+    border: 3px solid #f1f1f1;
+    width: 470px;
+    min-height: 200px;
+    background: url("post_title_bg.png") repeat-y;
+}
+.edit_post .submit input {
+    padding: 6px;
+    color: #999;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    float: right;
+}
+.edit_post .submit input:hover {
+    padding: 6px;
+    color: #EAC377;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    float: right;
+}
+
+
+.edit_post a{
+    font-size: 1.2em;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+}
+
+
+/* End of edit post styles */
 
 /* Footer */
 #footer {
