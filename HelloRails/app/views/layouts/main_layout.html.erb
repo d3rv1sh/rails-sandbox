@@ -19,7 +19,7 @@
 <body>
     <%= render(:partial => "user/header") %>
 
-<div id="wp">
+<div id="outside_wrapper">
 
   <% if !@signed %>
       <%= render(:partial => "user/sign_form") %>
@@ -37,27 +37,27 @@
       <div id="sidebar">
         <h4>Categories</h4>
         <ul class="list">
-          <li><a href="#">Curabitur sed</a></li>
-          <li><a href="#">Praesent adipiscing</a></li>
-          <li><a href="#">Duis sed justo</a></li>
-          <li><a href="#">Mauris vulputate</a></li>
-          <li><a href="#">Nam auctor</a></li>
-          <li><a href="#">Aliquam quam</a></li>
+          <li><a href="#">For good mood</a></li>
+          <li><a href="#">Funny ruby stuff</a></li>
+          <li><a href="#">Rails fraimwork</a></li>
+          <li><a href="#">Video and audio</a></li>
+          <li><a href="#">Making things going</a></li>
+          <li><a href="#">How to...</a></li>
         </ul>
       </div>
-      <div class="cleaner"></div>
+      <div class="clear"></div>
     </div>
 
     <!-- Slider block if necessary -->
-    <% if @slider %>
+    <% if !@hide_slider %>
     <%= render(:partial => "user/slider") %>
     <% end %>
 
     <!-- Content column -->
-    <div id="right_column">
+    <div id="right_column_wrapper">
 
       <!-- Posts block -->
-      <div id="main">
+      <div id="right_column">
         <%= yield %>
 
         <!-- RSS feed block -->
@@ -67,18 +67,18 @@
 
       </div> <!-- End of Posts block-->
 
-      <div class="cleaner"></div>
+      <div class="clear"></div>
 
     </div> <!-- End of content section-->
 
-    <div class="cleaner"></div>
+    <div class="clear"></div>
 
     <!-- Footer section-->
     <div id="footer">
       <p>The Ruby License is the <a href="http://en.wikipedia.org/wiki/Free_software_licence">free software licence </a> applied to the <a href="http://www.ruby-lang.org">Ruby programming language</a> and also available to be used in other projects.</p>
     </div>
 
-    <div class="cleaner"></div>
+    <div class="clear"></div>
 
   </div> <!-- End of Wrapper -->
 </div>

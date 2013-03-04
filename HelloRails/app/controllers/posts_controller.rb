@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   layout "main_layout"
   def index
     @posts = Post.all
-    render('user/index')
   end
 
   # GET /posts/1

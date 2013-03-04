@@ -3,19 +3,18 @@ class UserController < ApplicationController
   layout "main_layout"
   def index
     @chapter = "home"
-    @slider = true
     @posts = Post.all
     render ("posts/index")
   end
 
   def profile
     @chapter = "profile"
-    @slider = false
+    @hide_slider = true
   end
 
   def help
     @chapter = "help"
-    @slider = false
+    @hide_slider = true
     render('help')
   end
 
